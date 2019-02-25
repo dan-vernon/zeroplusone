@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_02_25_174151) do
 
   # These are extensions that must be enabled in order to support this database
@@ -18,10 +19,12 @@ ActiveRecord::Schema.define(version: 2019_02_25_174151) do
   create_table "bookings", force: :cascade do |t|
     t.text "description"
     t.date "date"
+    t.bigint "hero_id"
+    t.bigint "zero_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "hero_id"
-    t.string "zero_id"
+    t.index ["hero_id"], name: "index_bookings_on_hero_id"
+    t.index ["zero_id"], name: "index_bookings_on_zero_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -37,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_02_25_174151) do
     t.date "dob"
     t.string "location"
     t.text "bio"
+    t.boolean "hero"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
