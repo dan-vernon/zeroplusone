@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+skills = Skill.create(
+  [{skillset: 'talking about law'},
+    {skillset: 'juggling'},
+    {skillset: 'charming mothers in law'},
+    {skillset: 'schmoozing business associates'},
+    {skillset: 'dad dancing'},
+    {skillset: 'getting hilariuosly drunk'},
+    {skillset: 'getting on with difficult relatives'},
+    {skillset: 'convincing your grandma that you will pass on the family name' },
+    {skillset: 'foreign language'},
+    {skillset: 'great party tricks'},
+    {skillset: 'making friends with animals'},
+    {skillset: 'wine tasting'},
+    {skillset: 'sartorial elegance'},
+    {skillset: 'break dancing'},
+    {skillset: 'karaoke'},
+    {skillset: 'owns a gilet'},
+    {skillset: 'recognising bird calls'},
+    {skillset: 'good at regional accents'}])
