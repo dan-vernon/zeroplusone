@@ -8,6 +8,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.date    :dob
       t.string  :location
       t.text    :bio
+      t.boolean :hero
 
       ## Database authenticatable
       t.string :email,              null: false, default: ""
