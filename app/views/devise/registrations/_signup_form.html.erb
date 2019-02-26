@@ -1,0 +1,60 @@
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :hero,
+    as: :radio_buttons,
+    label: "Do you...",
+    required: true,
+    autofocus: true,
+    collection: [[true, 'want to be a +1?'], [false, 'need a +1?']],
+    label_method: :second, value_method: :first %>
+    <%= f.input :first_name,
+    placeholder: "Jill",
+    required: true,
+    autofocus: true,
+    input_html: {autocomplete: "first_name" }  %>
+    <%= f.input :last_name,
+    placeholder: "Tyrell",
+    required: true,
+    autofocus: true,
+    input_html: {autocomplete: "last_name" }  %>
+    <%= f.input :email,
+    placeholder: "beautybyjill@tiscali.co.uk",
+    required: true,
+    autofocus: true,
+    input_html: { autocomplete: "email" }%>
+    <%= f.input :dob, as: :date, html5: true,
+    label: "Date of birth:",
+    start_year: Date.today.year - 12,
+    end_year: Date.today.year - 90 %>
+    <%= f.input :location,
+    label: "Location:",
+    placeholder: "Taunton",
+    required: true,
+    autofocus: true,
+    input_html: {autocomplete: "location" }  %>
+    <%= f.input :bio, as: :text,
+    label: "Tell us a little about yourself (100 words max):",
+    placeholder: "Mid 20's, widow, with a lust for life and a flexible spine",
+    autofocus: true %>
+    <%= f.input :password,
+    label: "Enter a password:",
+    placeholder: "******",
+    required: true,
+    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+    input_html: { autocomplete: "new-password" } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :button, class: "btn btn-success" do %>
+      Complete sign-up
+    <% end %>
+
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
