@@ -1,2 +1,11 @@
 <h1>Users#index</h1>
 <p>Find me in app/views/users/index.html.erb</p>
+
+<% @users.each do |user| %>
+  <ul>
+    <li><%= user.first_name %></li>
+    <li><%= user.location %></li>
+    <li><%= ((Date.today - user.dob)/365).floor %></li>
+  </ul>
+<% end %>
+
