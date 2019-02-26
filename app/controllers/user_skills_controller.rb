@@ -27,12 +27,10 @@ class UserSkillsController < ApplicationController
   end
 
   def update
-    @user_skill
     @user_skill.update(user_skills_params)
   end
 
   def destroy
-    @user_skill
     @user_skill.destroy
     redirect_to user_show_path
   end
