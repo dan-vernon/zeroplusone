@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/index'
+  get 'users/show'
   get 'bookings/index'
   get 'bookings/show'
   get 'bookings/new'
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
   get 'bookings/update'
   get 'bookings/edit'
   get 'bookings/destroy'
+
+  resources :users, only: [:show, :index]
 
   devise_for :users
 
