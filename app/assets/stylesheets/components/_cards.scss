@@ -2,6 +2,75 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  border-radius: 8px;
+}
+
+.cards ul {
+  list-style: none;
+}
+
+.card-category {
+  display: flex;
+  border-radius: 8px;
+  border: solid black 1px;
+  align-content: left;
+}
+
+.user-card {
+  display: flex;
+  justify-content: center;
+
+}
+
+.user-card .main-image {
+  margin: 4px;
+  width: 40%;
+  height: 50%;
+}
+
+.info {
+
+}
+
+.user-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.user-card > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.user-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  border-radius: 8px;
+}
+
+.user-card p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.user-card .user-card-info {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.info .image-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
 }
 
 // Smallest device
