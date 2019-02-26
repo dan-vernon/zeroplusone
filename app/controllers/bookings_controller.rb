@@ -17,13 +17,16 @@ class BookingsController < ApplicationController
       redirect_to bookings_show_path
     else
       render :new
-  end
-
-  def update
+    end
   end
 
   def edit
+    @booking = Booking.find(params[:id])
+  end
 
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
   end
 
   def destroy
@@ -35,6 +38,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:user)
+    params.require(:booking).permit(:hero_id, :zero_id, :date, :description)
   end
 end
