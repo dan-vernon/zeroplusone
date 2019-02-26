@@ -5,6 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Skill.destroy_all
+User.destroy_all
+
+User.create!(first_name: "bob", last_name:"hoskins", hero: true, location: "sw114jp", password: "123123", email: "hello@gmail.com")
+User.create!(first_name: "bub", last_name:"hoskins", hero: false, location: "sw114jp", password: "123123", email: "hello@gmil.com")
+
 skills = Skill.create(
   [{skillset: 'talking about law'},
     {skillset: 'juggling'},
