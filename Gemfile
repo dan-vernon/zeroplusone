@@ -16,6 +16,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'omniauth', '~> 1.6', '>= 1.6.1'
+gem "pundit"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
