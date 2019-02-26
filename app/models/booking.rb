@@ -2,6 +2,7 @@ class Booking < ApplicationRecord
   # belongs_to :user
   belongs_to :hero, class_name: :User, foreign_key: "hero_id"
   belongs_to :zero, class_name: :User, foreign_key: "zero_id"
+  has_many :reviews
   validates :description, presence: true
   validates :date, presence: true
   # validate :availability_check
