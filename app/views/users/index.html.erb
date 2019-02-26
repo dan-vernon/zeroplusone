@@ -3,7 +3,7 @@
 
 <% @users.each do |user| %>
   <ul>
-    <li><%= user.first_name %></li>
+    <li> <%= link_to user.first_name, users_show_path(user) %> </li>
     <li><%= user.location %></li>
     <li><%= ((Date.today - user.dob)/365).floor %> years old</li>
     <li><%= user.bio %></li>
