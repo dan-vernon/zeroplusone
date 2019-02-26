@@ -1,6 +1,15 @@
 class UserSkillsController < ApplicationController
+
+  def index
+    @user_skill = UserSkill.all
+  end
+
+  def show
+    @user_skill = UserSkill.find(params[:id])
+  end
+
   def new
-    UserSkill.new()
+    @user_skill = UserSkill.new
   end
 
   def create
@@ -10,6 +19,21 @@ class UserSkillsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @user_skill = UserSkill.find(params[:id])
+  end
+
+  def destroy
+    @user_skill = UserSkill.find(params[:id])
+    @user_skill.destroy
+    redirect_to user_show_path
+  end
+
+  def update
+    @user_skill = UserSkill.find(params[:id])
+    @user_skill.update(user_skills_params)
   end
 
   private
