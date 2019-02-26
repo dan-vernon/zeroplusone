@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'bookings/edit'
   get 'bookings/destroy'
 
+  resources :users, only: [:show, :index]
+
   devise_for :users
 
   root to: 'pages#home'
