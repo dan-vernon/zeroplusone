@@ -2,8 +2,14 @@ require 'faker'
 
 Skill.destroy_all
 User.destroy_all
+UserSkill.destroy_all
+Booking.destroy_all
+Review.destroy_all
+
 
 # seed skills
+
+puts "Seeding skills"
 
 Skill.create!(
   [{skillset: 'talking about law'},
@@ -26,8 +32,9 @@ Skill.create!(
     {skillset: 'good at regional accents'}])
 
 # seed users
+puts "Seeding users"
 
-20.times do
+5.times do
   User.create!(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -36,14 +43,20 @@ Skill.create!(
   bio: Faker::Hipster.sentence,
   hero: [true,false].sample,
   dob: Faker::Date.backward(20000), password: "password",
-  photo: open("https://loremflickr.com/600/800/hero"))
+  # photo: open("https://loremflickr.com/600/800/person")
+  )
+  puts "User created"
 end
 
-50.times do
-  Booking.create!(
-    description: Faker::Superhero.name,
-    date: Faker::Date.between(20.days.ago, Date.today),
-    hero: User.heroes.sample,
-    zero: User.zeroes.sample
-    )
-end
+puts "Seeding bookings"
+
+# 50.times do
+#   Booking.create!(
+#     description: Faker::Superhero.name,
+#     date: Faker::Date.between(20.days.ago, Date.today),
+#     hero: User.heroes.sample,
+#     zero: User.zeroes.sample
+#     )
+# end
+
+puts "Seeding complete."

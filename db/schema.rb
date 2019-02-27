@@ -85,6 +85,4 @@ ActiveRecord::Schema.define(version: 2019_02_27_115959) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
-  add_foreign_key "user_skills", "skills"
-  add_foreign_key "user_skills", "users"
 end
