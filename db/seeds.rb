@@ -34,7 +34,7 @@ Skill.create!(
 # seed users
 puts "Seeding users"
 
-5.times do
+10.times do
   User.create!(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -42,21 +42,21 @@ puts "Seeding users"
   location: Faker::Address.city,
   bio: Faker::Hipster.sentence,
   hero: [true,false].sample,
-  dob: Faker::Date.backward(20000), password: "password",
-  # photo: open("https://loremflickr.com/600/800/person")
-  )
+  dob: Faker::Date.backward(20000),
+  password: "password",
+  photo: open("https://loremflickr.com/600/800/person"))
   puts "User created"
 end
 
 puts "Seeding bookings"
 
-# 50.times do
-#   Booking.create!(
-#     description: Faker::Superhero.name,
-#     date: Faker::Date.between(20.days.ago, Date.today),
-#     hero: User.heroes.sample,
-#     zero: User.zeroes.sample
-#     )
-# end
+10.times do
+  Booking.create!(
+    description: Faker::Superhero.name,
+    date: Faker::Date.between(20.days.ago, Date.today),
+    hero: User.heroes.sample,
+    zero: User.zeroes.sample
+    )
+end
 
 puts "Seeding complete."
