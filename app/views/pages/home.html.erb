@@ -6,7 +6,11 @@
 
 <div class="container d-flex">
   <div class="form">
-  <p>hello</p>
+
+
+  <%= render 'devise/registrations/signup_form', resource: @resource, resource_name: :user, devise_mapping: @devise_mapping %>
+  <%= link_to 'sign-out', destroy_user_session_path, method: :delete%>
+
   </div>
   <div class="user-cards d-flex">
     <% @users.each do |user|  %>
@@ -17,7 +21,7 @@
       </div>
     <% end %>
   </div>
+   <%= link_to "Find a hero", users_path %>
 </div>
 
-<%= link_to 'sign-out', destroy_user_session_path, method: :delete%>
 
