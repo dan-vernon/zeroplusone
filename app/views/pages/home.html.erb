@@ -1,34 +1,37 @@
-<div class="banner typed-">
-
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://s24193.pcdn.co/wp-content/uploads/2017/08/candice-horde-entity-@artofgeorge-1.png);">
     <h1>Zero Plus One</h1>
 
     <h2>Find the perfect plus one for your awkward family event!</h2>
 
-    <div class="d-flex content">
-      <div class="form">
-        <%= render 'devise/registrations/signup_form', resource: @resource, resource_name: :user, devise_mapping: @devise_mapping %>
-        <%= link_to 'sign-out', destroy_user_session_path, method: :delete%>
-      </div>
-      <div class="cards">
-        <% @users.each do |user|  %>
-          <div>
-            <%= link_to user_path(user) do %>
+    <% if user_signed_in? %>
+      <p class="hero"><%= link_to "Find a hero", users_path, class: "btn btn-gradient" %></p>
+      <p class="log-out"><%= link_to 'sign-out', destroy_user_session_path, method: :delete, class: "btn btn-gradient" %> </p>
+    <% else %>
+     <p><%= link_to "Log in", user_session_path, class: "btn btn-gradient" %></p>
+    <% end %>
+</div>
 
-            <%= cl_image_tag(user.photo, :transformation=>[
-              {:gravity=>"face"},
-              {:height=>300, :crop=>"fill"}
-              ]) %>
-              <br>
-              <%= user.first_name %>
-              <% end %>
-            <br>
-            <span class="text-muted">
-              (<%= user.location %>)
-            </span>
-                      </div>
-        <% end %>
-      </div>
-    </div>
-
-    <p><%= link_to "Find a hero", users_path, class: "btn btn-gradient" %></p>
+<div class=" content">
+  <div class="cards">
+    <% @users.each do |user|  %>
+      <div>
+        <%= link_to user_path(user) do %>
+        <%= cl_image_tag(user.photo, :transformation=>[
+          {:effect=>"vectorize"},
+          {:gravity=>"face"},
+          {:height=>300, :crop=>"scale"}
+          ]) %>
+          <br>
+          <%= user.first_name %>
+          <% end %>
+        <br>
+        <span class="text-muted">
+          (<%= user.location %>)
+        </span>
+     </div>
+    <% end %>
   </div>
+</div>
+
+
+
