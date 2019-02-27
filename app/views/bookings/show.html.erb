@@ -1,8 +1,8 @@
 <h1>Your date</h1>
 <p>Have a great time!</p>
 <ul>
-  <li>You, the loser, <%= @booking.zero %></li>
-  <li>Your date with <%= @booking.hero %></li>
+  <li>You, the loser, <%= @booking.zero.first_name %></li>
+  <li>Your date with <%= @booking.hero.first_name %></li>
   <li> On: <%= @booking.date %></li>
   <li><%= @booking.description %></li>
 </ul>
