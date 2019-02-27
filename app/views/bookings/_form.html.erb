@@ -1,0 +1,19 @@
+<%  hero = User.find(params[:user_id]) %>
+<%= zero = current_user %>
+
+<%= simple_form_for([hero, @booking]) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].
+  to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-input">
+    <%= f.input :date %>
+    <%= f.input :description %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+<%= link_to "return to home", root_path %>
