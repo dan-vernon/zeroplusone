@@ -11,4 +11,12 @@ class User < ApplicationRecord
   validates :email, presence: true, format: /\w+@\w+\.{1}[a-zA-Z]{2,}/, uniqueness: true
   devise :database_authenticatable, :registerable
   mount_uploader :photo, PhotoUploader
+
+  def self.heroes
+    where(hero: true)
+  end
+
+  def self.zeroes
+    where(hero: false)
+  end
 end

@@ -3,8 +3,8 @@
 
 <% @bookings.each do |booking| %>
 <ul>
-  <li>You, the loser, <%= booking.zero %></li>
-  <li>Your date with <%= booking.hero %></li>
+  <li>You, the loser, <%= booking.zero.first_name %></li>
+  <li>Your date with <%= booking.hero.first_name %></li>
   <li> On: <%= booking.date %></li>
   <li><%= booking.description %></li>
 </ul>
