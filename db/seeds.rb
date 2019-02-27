@@ -44,8 +44,17 @@ puts "Seeding users"
   hero: [true,false].sample,
   dob: Faker::Date.backward(20000),
   password: "password",
-  photo: open("https://loremflickr.com/600/800/person"))
-  puts "User created"
+  # photo: open("https://loremflickr.com/600/800/person")
+  )
+  # puts "User created"
+end
+
+puts "seeding UserSkills"
+
+10.times do
+  UserSkill.create!(
+    user: User.heroes.sample,
+    skill: Skill.all.sample)
 end
 
 puts "Seeding bookings"
@@ -60,3 +69,4 @@ puts "Seeding bookings"
 end
 
 puts "Seeding complete."
+
