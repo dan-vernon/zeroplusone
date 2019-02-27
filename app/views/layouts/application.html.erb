@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <!-- <%#= stylesheet_pack_tag 'application', media: 'all' %> Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
     <body>
@@ -34,8 +34,10 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 </div>
-    <%= yield %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    <div class="container">
+        <%= yield %>
+        <%= javascript_include_tag 'application' %>
+        <%= javascript_pack_tag 'application' %>
+    </div>
   </body>
 </html>
