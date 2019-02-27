@@ -27,7 +27,7 @@ Skill.create!(
 
 # seed users
 
-50.times do
+20.times do
   User.create!(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -35,5 +35,6 @@ Skill.create!(
   location: Faker::Address.city,
   bio: Faker::Hipster.sentence,
   hero: [true,false].sample,
-  dob: Faker::Date.backward(20000), password: "password")
+  dob: Faker::Date.backward(20000), password: "password",
+  photo: open("https://loremflickr.com/600/800/hero"))
 end
