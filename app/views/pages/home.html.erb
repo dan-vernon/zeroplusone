@@ -1,27 +1,26 @@
 <div class="banner typed-" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
-  <h1>Zero Plus One</h1>
 
-  <h2>Find the perfect plus one for your awkward family event!</h2>
-</div>
+  <div class="container">
+    <h1>Zero Plus One</h1>
 
-<div class="container d-flex">
-  <div class="form">
+    <h2>Find the perfect plus one for your awkward family event!</h2>
 
-
-  <%= render 'devise/registrations/signup_form', resource: @resource, resource_name: :user, devise_mapping: @devise_mapping %>
-  <%= link_to 'sign-out', destroy_user_session_path, method: :delete%>
-
-  </div>
-  <div class="user-cards d-flex">
-    <% @users.each do |user|  %>
-      <div class="card" style="width:200px; height: 100px;">
-        <img src="https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="hero-photo" style="width:200px; height: 200px;">
-        <%#= cl_image_tag user.photo, height: 300, width: 400, crop: :fill %>
-          <p class="card-title"><%= user.first_name %></p>
+    <div class="container d-flex content">
+      <div class="form">
+        <%= render 'devise/registrations/signup_form', resource: @resource, resource_name: :user, devise_mapping: @devise_mapping %>
+        <%= link_to 'sign-out', destroy_user_session_path, method: :delete%>
       </div>
-    <% end %>
+      <div class="cards">
+        <% @users.each do |user|  %>
+          <div>
+            <img src="https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="hero-photo" style="width:200px; height: 200px;">
+            <%#= cl_image_tag user.photo, height: 300, width: 400, crop: :fill %>
+            <p class="card-title"><%= user.first_name %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <p><%= link_to "Find a hero", users_path, class: "btn btn-gradient" %></p>
   </div>
-   <%= link_to "Find a hero", users_path %>
 </div>
-
-
