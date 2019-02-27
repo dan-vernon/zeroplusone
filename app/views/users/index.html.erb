@@ -19,7 +19,7 @@
     <div>
       <h2><%= user.first_name %></h2>
       <p> <ul>
-            <li> <%= link_to user.first_name, users_show_path(user) %> </li>
+            <li> <%= link_to user.first_name, user_path(user) %> </li>
             <li><%= user.location %></li>
             <li><%= ((Date.today - user.dob)/365).floor %> years old</li>
             <li><%= user.bio %></li>
