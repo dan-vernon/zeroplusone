@@ -1,11 +1,11 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.where(zero: current_user.id)
+    @bookings = Booking.where(zero: current_user)
   end
 
   def show
     @booking = Booking.find(params[:id])
-    @bookings = Booking.where(zero: current_user.id)
+    @bookings = Booking.where(zero: current_user)
   end
 
   def new
