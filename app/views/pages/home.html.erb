@@ -15,9 +15,8 @@
             <%= link_to user_path(user) do %>
 
             <%= cl_image_tag(user.photo, :transformation=>[
-              {:effect=>"vectorize"},
               {:gravity=>"face"},
-              {:height=>300, :crop=>"scale"}
+              {:height=>300, :crop=>"fill"}
               ]) %>
               <br>
               <%= user.first_name %>
