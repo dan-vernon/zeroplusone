@@ -18,6 +18,7 @@ gem 'devise'
 gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem "pundit"
 gem "faker"
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development do
   gem 'web-console', '>= 3.3.0'
