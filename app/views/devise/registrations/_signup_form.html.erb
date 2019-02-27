@@ -39,6 +39,8 @@
     label: "Tell us a little about yourself (100 words max):",
     placeholder: "Mid 20's, widow, with a lust for life and a flexible spine",
     autofocus: true %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
     <%= f.input :password,
     label: "Enter a password:",
     placeholder: "******",
