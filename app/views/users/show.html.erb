@@ -8,9 +8,7 @@
       <p><strong>DOB:</strong><%= @user.dob %></p>
       <p><strong>Bio:</strong><%= @user.bio %></p>
       <p><strong>Email:</strong><%= @user.email %></p>
-    <!--  <p><strong>Skills:</strong></p> -->
-    <a href="#" class="btn btn-primary">Book me</a> <!--this should take user to booking.new.html> -->
-    <%#= link_to "Book me", bookings_path, class: "btn" %>
+    <%= link_to "Book me",  new_user_booking_path(@user), class: "btn btn-flat" %>
     </div>
   </div>
 
