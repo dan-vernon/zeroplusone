@@ -17,6 +17,7 @@ gem 'webpacker'
 gem 'devise'
 gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem "pundit"
+gem "faker"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
