@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :index] do
     resources :reviews, only: [:create, :new, :index]
+    resources :user_skills
   end
 
   get 'users/index'
