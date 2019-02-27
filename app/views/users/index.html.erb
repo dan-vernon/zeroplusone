@@ -1,11 +1,32 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+   <h1>Heros available for you to pick</h1>
+    <p>Select a user for more information</p>
+
+    <a class="btn btn-flat" href="#">Sign up</a>
+  </div>
+</div>
+
+<div class="cards">
 
 <% @users.each do |user| %>
-  <ul>
-    <li> <%= link_to user.first_name, users_show_path(user) %> </li>
-    <li><%= user.location %></li>
-    <li><%= ((Date.today - user.dob)/365).floor %> years old</li>
-    <li><%= user.bio %></li>
-  </ul>
+
+<div class="user-card">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg" class="main-image">
+  <div class="info">
+    <div>
+      <h2><%= user.first_name %></h2>
+      <p> <ul>
+            <li> <%= link_to user.first_name, users_show_path(user) %> </li>
+            <li><%= user.location %></li>
+            <li><%= ((Date.today - user.dob)/365).floor %> years old</li>
+            <li><%= user.bio %></li>
+          </ul></p>
+    </div>
+    <h2 class="user-card-info "></h2>
+    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="image-user avatar-bordered"/>
+  </div>
+</div>
 <% end %>
