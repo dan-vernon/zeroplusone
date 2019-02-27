@@ -31,8 +31,10 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 </div>
-    <%= yield %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    <div class="container">
+        <%= yield %>
+        <%= javascript_include_tag 'application' %>
+        <%= javascript_pack_tag 'application' %>
+    </div>
   </body>
 </html>
