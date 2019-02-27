@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :first_name, :last_name, :location, presence: true
   validates :email, presence: true, format: /\w+@\w+\.{1}[a-zA-Z]{2,}/, uniqueness: true
   devise :database_authenticatable, :registerable
+  mount_uploader :photo, PhotoUploader
 end
