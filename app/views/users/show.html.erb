@@ -2,7 +2,7 @@
   <h1><%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h1>
 
   <div class=" user-bio d-flex justify-content-between">
-    <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1576&q=80" alt="hero-profile" style="width:200px; height: 200px;">
+    <p><%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %></p>
     <div class="info">
       <p><strong>Location:</strong><<%= @user.location %></p>
       <p><strong>DOB:</strong><%= @user.dob %></p>
