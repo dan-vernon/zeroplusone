@@ -37,3 +37,12 @@ Skill.create!(
   hero: [true,false].sample,
   dob: Faker::Date.backward(20000), password: "password")
 end
+
+50.times do
+  Booking.create!(
+    description: Faker::Superhero.name,
+    date: Faker::Date.between(20.days.ago, Date.today),
+    hero: User.heroes.sample,
+    zero: User.zeroes.sample
+    )
+end
