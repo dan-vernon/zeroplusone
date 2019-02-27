@@ -6,16 +6,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :index] do
     resources :reviews, only: [:create, :new, :index]
+      resources :bookings
   end
 
-  get 'users/index'
-  get 'users/show'
-  get 'bookings/index'
-  get 'bookings/show'
-  get 'bookings/new'
-  get 'bookings/create'
-  get 'bookings/update'
-  get 'bookings/edit'
-  get 'bookings/destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
