@@ -1,23 +1,27 @@
+<div class="banner typed-" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
+  <h1>Zero Plus One</h1>
 
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+  <h2>Find the perfect plus one for your awkward family event!</h2>
+</div>
 
-<%= link_to 'sign-out', destroy_user_session_path, method: :delete%>
+<div class="container d-flex">
+  <div class="form">
 
 
-<h1>Zero Plus One</h1>
-<br>
-<h2>Find the perfect plus one for your awkward family event!</h2>
+  <%= render 'devise/registrations/signup_form', resource: @resource, resource_name: :user, devise_mapping: @devise_mapping %>
+  <%= link_to 'sign-out', destroy_user_session_path, method: :delete%>
 
-<!-- <p>Find me in app/views/pages/home.html.erb</p>
- -->
-
-<% @users.each do |user|  %>
-  <div class="card" style="width: 18rem;">
-    <img src="https://images.unsplash.com/photo-1444728399417-08d2aa39e6f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
-    <div class="card-body">
-      <h5 class="card-title"><%= user.first_name %></h5>
-      <a href="#" class="btn btn-primary">View Hero</a>
-    </div>
   </div>
-<% end %>
+  <div class="user-cards d-flex">
+    <% @users.each do |user|  %>
+      <div class="card" style="width:200px; height: 100px;">
+        <img src="https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="hero-photo" style="width:200px; height: 200px;">
+        <%#= cl_image_tag user.photo, height: 300, width: 400, crop: :fill %>
+          <p class="card-title"><%= user.first_name %></p>
+      </div>
+    <% end %>
+  </div>
+   <%= link_to "Find a hero", users_path %>
+</div>
+
+
