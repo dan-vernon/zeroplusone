@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @user_dob = helpers.age_in_years(@user)
+    # @user_dob = helpers.age_in_years(@user)
   end
 
   # def self.age
