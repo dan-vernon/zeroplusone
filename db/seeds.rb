@@ -44,8 +44,8 @@ puts "Seeding users"
   hero: [true,false].sample,
   dob: Faker::Date.backward(20000),
   password: "password",
-  # photo: open("https://loremflickr.com/600/800/person")
   )
+  # photo: open("https://loremflickr.com/600/800/person")
   # puts "User created"
 end
 
