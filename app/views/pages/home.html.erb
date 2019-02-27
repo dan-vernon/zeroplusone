@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://s24193.pcdn.co/wp-content/uploads/2017/08/candice-horde-entity-@artofgeorge-1.png);">
+<div class="banner px-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://s24193.pcdn.co/wp-content/uploads/2017/08/candice-horde-entity-@artofgeorge-1.png');">
     <h1>Zero Plus One</h1>
 
     <h2>Find the perfect plus one for your awkward family event!</h2>
@@ -17,7 +17,6 @@
       <div>
         <%= link_to user_path(user) do %>
         <%= cl_image_tag(user.photo, :transformation=>[
-          {:effect=>"vectorize"},
           {:gravity=>"face"},
           {:height=>300, :crop=>"scale"}
           ]) %>
