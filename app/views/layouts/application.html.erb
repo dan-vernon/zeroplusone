@@ -9,15 +9,14 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <!-- <%#= stylesheet_pack_tag 'application', media: 'all' %> Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <%= render 'navbar' %>
-  <body>
     <body>
+      <%= render 'pages/navbar' %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
       <div class="container">
         <%= yield %>
         <%= javascript_include_tag 'application' %>
         <%= javascript_pack_tag 'application' %>
-    </div>
+      </div>
   </body>
 </html>
