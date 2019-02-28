@@ -1,19 +1,19 @@
-<div class="banner px-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('');">
+<div>
     <h1>Zero Plus One</h1>
     <h2>Find the perfect plus one for your awkward family event!</h2>
-    <p class="hero"><%= link_to "Find a hero", users_path, class: "btn btn-flat" %></p>
+    <p><%= link_to "Find a hero", users_path, class: "btn btn-flat home-btn" %></p>
 </div>
-<hr>
+
   <div class="footer">
     <section class="social-icons">
       <ul>
         <li class="icons">
-          <span class="icon"><i class="fab fa-facebook-f"></i></span>
-          <span class="icon"><i class="fab fa-twitter"></i></span>
-          <span class="icon"><i class="fab fa-instagram"></i></span>
+         <span class="icon"><a href="#"><i class="fab fa-facebook-f"></i></a></span>
+          <span class="icon"><a href="#"><i class="fab fa-twitter"></i></a></span>
+          <span class="icon"><a href="#"><i class="fab fa-instagram"></i></a></span>
         </li>
-        <li>
-          <div class="terms">
+        <li class="terms">
+          <div >
             <p>Terms</p>
             <p>Privacy</p>
             <p>Site Map</p>
@@ -24,6 +24,7 @@
     </section>
   </div>
 </div>
+
 
 
 <%# if user_signed_in? %>
