@@ -1,5 +1,9 @@
   <% @user = current_user %>
-  <div class="navbar navbar-expand-lg navbar-expand-md navbar-light navbar-lewagon fixed-top">
+  <% if params[:action] == "home" %>
+    <div class="navbar navbar-expand-lg navbar-expand-md navbar-light navbar-lewagon fixed-top navbar-transparent">
+  <% else %>
+    <div class="navbar navbar-expand-lg navbar-expand-md navbar-light navbar-lewagon fixed-top navbar-purple">
+  <% end %>
 
   <%= link_to "/", class: "navbar-brand" do %>
    <i class="fas fa-bolt bolt"></i>
