@@ -1,36 +1,35 @@
-<div class="banner px-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://s24193.pcdn.co/wp-content/uploads/2017/08/candice-horde-entity-@artofgeorge-1.png');">
+<div>
     <h1>Zero Plus One</h1>
-
     <h2>Find the perfect plus one for your awkward family event!</h2>
-
-    <% if user_signed_in? %>
-      <p class="hero"><%= link_to "Find a hero", users_path, class: "btn btn-gradient" %></p>
-      <p class="log-out"><%= link_to 'sign-out', destroy_user_session_path, method: :delete, class: "btn btn-gradient" %> </p>
-    <% else %>
-     <p><%= link_to "Log in", user_session_path, class: "btn btn-gradient" %></p>
-    <% end %>
+    <p><%= link_to "Find a hero", users_path, class: "btn btn-flat home-btn" %></p>
 </div>
 
-<div class=" content">
-  <div class="cards">
-    <% @users.each do |user|  %>
-      <div>
-        <%= link_to user_path(user) do %>
-        <%= cl_image_tag(user.photo, :transformation=>[
-          {:gravity=>"face"},
-          {:height=>300, :crop=>"scale"}
-          ]) %>
-          <br>
-          <%= user.first_name %>
-          <% end %>
-        <br>
-        <span class="text-muted">
-          (<%= user.location %>)
-        </span>
-     </div>
-    <% end %>
+  <div class="footer">
+    <section class="social-icons">
+      <ul>
+        <li class="icons">
+         <span class="icon"><a href="#"><i class="fab fa-facebook-f"></i></a></span>
+          <span class="icon"><a href="#"><i class="fab fa-twitter"></i></a></span>
+          <span class="icon"><a href="#"><i class="fab fa-instagram"></i></a></span>
+        </li>
+        <li class="terms">
+          <div >
+            <p>Terms</p>
+            <p>Privacy</p>
+            <p>Site Map</p>
+          </div>
+        </li>
+
+      </ul>
+    </section>
   </div>
 </div>
 
 
 
+<%# if user_signed_in? %>
+      <!-- <p class="hero"><%#= link_to "Find a hero", users_path, class: "btn btn-gradient" %></p>
+      <p class="log-out"><%#= link_to 'sign-out', destroy_user_session_path, method: :delete, class: "btn btn-gradient" %> </p> -->
+    <%# else %>
+     <!-- <p><%#= link_to "Log in", user_session_path, class: "btn btn-gradient" %></p>
+    <%# end %> -->
