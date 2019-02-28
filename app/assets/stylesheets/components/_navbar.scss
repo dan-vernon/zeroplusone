@@ -1,7 +1,13 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
+}
 
+.navbar-transparent {
+  background: transparent;
+}
+
+.navbar-purple {
+  background: #2a2f6c;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,16 +21,17 @@
 .nav-link-color {
   font-size: 20px !important;
   font-weight: 200px !important;
+  color: white !important;
 }
 
 .bolt {
   font-size: 32px;
+  color: white !important;
 }
 
-.navbar {
-  background: rgba(255, 255, 255, 0.3);
+.nav-item  {
+  color: white !important;
 }
-
 .nav-item .active:hover {
   opacity: 1;
   color: black;
