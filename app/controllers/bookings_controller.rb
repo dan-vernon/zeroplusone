@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.hero = User.find(params[:user_id])
     @booking.zero = current_user
     if @booking.save
-      redirect_to user_bookings_path(@booking.hero, @booking)
+      redirect_to booking_path(@booking)
     else
       render :new
     end
