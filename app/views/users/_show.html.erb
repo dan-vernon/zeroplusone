@@ -22,5 +22,42 @@
     <%= link_to "Return to heroes", users_path, class: "btn btn-flat"%>
     </div>
   </div>
-
 </div>
+
+
+
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"><%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          </div>
+            <div class="modal-body">
+              <p><strong>Location: </strong></p>
+              <p><%= @user.location %></p>
+              <p><strong>DOB: </strong></p>
+              <p><%= @user.dob %></p>
+              <p><strong>Bio: </strong></p>
+              <p><%= @user.bio %></p>
+              <p><strong>Email: </strong></p>
+              <p><%= @user.email %></p>
+              <p><strong>Skills:</strong></p>
+              <% @user.skills.each do |skill| %>
+              <ul>
+              <li><%= skill.skillset %></li>
+              </ul>
+              <% end %>
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-flat" data-dismiss="modal">Return to heroes</button>
+            <%= link_to "Return to heroes", users_path, class: "btn btn-flat" %>
+          </div>
+    </div>
+  </div>
+</div>
+ -->
