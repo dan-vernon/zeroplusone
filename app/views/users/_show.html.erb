@@ -1,8 +1,8 @@
-<div class="container">
+<div class="show-holder">
   <h1><%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h1>
 
   <div class=" user-bio d-flex justify-content-between">
-    <p><%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %></p>
+    <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
     <div class="info">
       <p><strong>Location: </strong></p>
       <p><%= @user.location %></p>
@@ -18,8 +18,11 @@
       <li><%= skill.skillset %></li>
       </ul>
       <% end %>
-    <%= link_to "Book me",  new_user_booking_path(@user), class: "btn btn-flat" %>
-    <%= link_to "Return to heroes", users_path, class: "btn btn-flat"%>
+
+
+   <i class="button"><%= link_to "Book me",  new_user_booking_path(@user), class: "btn btn-flat" %></i>
+    <i class="button"><%= link_to "Return to heroes", users_path, class: "btn btn-flat"%></i>
+  </span>
     </div>
   </div>
 </div>
