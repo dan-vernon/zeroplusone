@@ -13,12 +13,19 @@
 }
 
 .nav-link-color {
-  color: #8d3c2c !important;
   font-size: 20px !important;
   font-weight: 200px !important;
 }
 
 .bolt {
-  color: #8d3c2c;
   font-size: 32px;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-item .active:hover {
+  opacity: 1;
+  color: black;
 }

@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_02_27_115959) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "content"
-    t.integer "ratings"
+    t.integer "rating"
     t.bigint "booking_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -38,9 +38,9 @@ ActiveRecord::Schema.define(version: 2019_02_27_115959) do
   end
 
   create_table "skills", force: :cascade do |t|
-    t.string "skillset"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "skillset"
   end
 
   create_table "user_skills", force: :cascade do |t|
@@ -85,4 +85,6 @@ ActiveRecord::Schema.define(version: 2019_02_27_115959) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "user_skills", "skills"
+  add_foreign_key "user_skills", "users"
 end

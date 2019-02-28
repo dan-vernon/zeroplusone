@@ -8,13 +8,12 @@
 
   <div class="form-input">
     <%= f.input :date, as: :date, html5: true,
-    label: "When would you like to book your hero?" %>
-    <%= f.input :description, label: "Tell them about your event" %>
+    label: "Select your event date" %>
+    <%= f.input :description, label: "Describe your event and why YOU need a hero..." %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions d-flex justify-content-center">
+    <%= f.button :submit, "Book Hero", class: "btn-flat" %>
   </div>
 <% end %>
 
-<%= link_to "return to home", root_path %>
