@@ -1,4 +1,5 @@
-<div class="navbar navbar-expand-lg navbar-expand-md navbar-light navbar-lewagon fixed-top">
+  <% @user = current_user %>
+  <div class="navbar navbar-expand-lg navbar-expand-md navbar-light navbar-lewagon fixed-top">
 
   <%= link_to "/", class: "navbar-brand" do %>
    <i class="fas fa-bolt bolt"></i>
@@ -36,6 +37,5 @@
         <% end %>
     </ul>
   </div>
-
 </div>
 
