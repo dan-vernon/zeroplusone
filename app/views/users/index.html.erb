@@ -1,30 +1,24 @@
 
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://s24193.pcdn.co/wp-content/uploads/2017/08/candice-horde-entity-@artofgeorge-1.png);">
-  <div class="container">
-    <h1>Heros available for you to pick</h1>
-    <h2>Select a user for more information</h2>
-  </div>
+<div class="banner p-3 my-3 d-flex flex-column rounded">
+    <h1 class="mb-auto">Choose your PlusOne</h1>
+    <h3>We found <%= User.all.count %> PlusOnes in your local area</h3>
 </div>
-
+<hr>
 <div class="cards">
 
 <% @users.each do |user| %>
 
-<div class="user-card">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg" class="main-image">
-  <%#= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
-  <div class="info">
-    <div>
+<div class="card p-3" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)), url(<%= user.photo %>); background-position: center;">
+  <%#= cl_image_tag user.photo, height: 300, width: 400, crop: :fill %>
+  <div class="card-body">
+    <div class="card-title">
       <h2><%= user.first_name %></h2>
-      <p> <ul>
-            <li><%= user.location %></li>
-            <li><%= ((Date.today - user.dob)/365).floor %> years old</li>
-            <li><%= user.bio %></li>
-          </ul></p>
     </div>
-    <%= link_to "View hero", user_path(user), class: "btn btn-flat" %>
-    <h2 class="user-card-info "></h2>
+    <span class="card-text"><%= user.location %></span>
+    <span class="card-button">
+    <%= link_to "Meet #{user.first_name}", user_path(user), class: "btn btn-flat" %>
+    </span>
   </div>
 </div>
 <% end %>
