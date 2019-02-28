@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @user.hero ? @bookings = @user.bookings_as_hero : @bookings = @user.bookings_as_zero
+    @skills = @user.skills
     # @user_dob = helpers.age_in_years(@user)
   end
 

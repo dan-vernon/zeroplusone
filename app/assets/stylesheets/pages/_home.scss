@@ -1,1 +1,57 @@
 // Specific CSS for your home-page
+body {
+  background: url(http://upload.wikimedia.org/wikipedia/commons/d/dd/Muybridge_race_horse_animated.gif) no-repeat center center fixed;
+  background-size: cover;
+  }
+
+h1 {
+  font-size: 48px;
+  margin-top: 40px;
+}
+
+h2 {
+  margin-top: 20px;
+  // font-weight: 100px;
+}
+.footer{
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.social-icons {
+  padding-left: 100px;
+}
+
+.icons {
+  font-size: 24px;
+  list-style: none;
+}
+
+.icons a {
+  color: black;
+}
+
+.icon {
+  padding: 10px;
+}
+
+.terms {
+  list-style: none;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.terms p {
+  margin: 0;
+}
+
+.home-btn {
+  margin-top: 40px;
+  width: 200px;
+  padding: 16px;
+}
+
