@@ -9,38 +9,14 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <!-- <%#= stylesheet_pack_tag 'application', media: 'all' %> Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <body>
     <body>
+      <%= render 'pages/navbar' %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-    <div class="navbar navbar-expand-lg navbar-expand-md navbar-light navbar-lewagon fixed-top">
-    <%= link_to "#", class: "navbar-brand" do %>
-   <i class="fas fa-bolt bolt"></i>
-    <% end %>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <%= link_to "Home", "/", class: "nav-link nav-link-color" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "Sign up", "/", class: "nav-link nav-link-color" %>
-        </li>
-
-        <!-- <li class="nav-item active">
-          <%#= link_to "My bookings", user_bookings_path(current_user), class: "nav-link nav-link-color" %>  </li> -->
-      </ul>
-    </div>
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-    <span class="navbar-toggler-icon"></span>
-  </button>
-</div>
-    <div class="container">
-      <%= yield %>
-      <%= javascript_include_tag 'application' %>
-      <%= javascript_pack_tag 'application' %>
-    </div>
+      <div class="container">
+        <%= yield %>
+      </div>
+        <%= javascript_include_tag 'application' %>
+        <%= javascript_pack_tag 'application' %>
   </body>
 </html>
