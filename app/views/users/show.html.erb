@@ -1,15 +1,1 @@
-<div class="container">
-  <h1><%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h1>
-
-  <div class=" user-bio d-flex justify-content-between">
-    <p><%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %></p>
-    <div class="info">
-      <p><strong>Location:</strong><<%= @user.location %></p>
-      <p><strong>DOB:</strong><%= @user.dob %></p>
-      <p><strong>Bio:</strong><%= @user.bio %></p>
-      <p><strong>Email:</strong><%= @user.email %></p>
-    <%= link_to "Book me",  new_user_booking_path(@user), class: "btn btn-flat" %>
-    </div>
-  </div>
-
-</div>
+<%= render 'show' %>
