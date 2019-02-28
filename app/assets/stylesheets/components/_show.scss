@@ -16,5 +16,42 @@
 
 .show-holder img {
   display: block;
-  margin: 50px;
+  margin: 40px;
 }
+
+.info {
+  margin: 40px;
+}
+
+.i {
+display: inline;
+}
+
+.inline-buttons {
+    text-align: center;
+}
+
+
+
+.inline-buttons .button {
+    width: 100%;
+    margin: 20px;
+
+}
+
+.show-holder ul,
+li {
+
+  list-style: none;
+}
+
+.show-holder
+li:before {
+  content: '\f192';
+  font-family: 'FontAwesome';
+  float: left;
+  margin-left: -1.5em;
+  color: #0074D9;
+}
+
+
