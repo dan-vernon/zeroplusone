@@ -2,7 +2,7 @@
   <h1><%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h1>
 
   <div class=" user-bio d-flex justify-content-between">
-    <p><%#= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %></p>
+    <p><%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %></p>
     <div class="info">
       <p><strong>Location: </strong></p>
       <p><%= @user.location %></p>
