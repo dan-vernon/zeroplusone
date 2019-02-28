@@ -14,10 +14,10 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   def self.heroes
-    where(hero: true)
+    User.where(hero: true)
   end
 
   def self.zeroes
-    where(hero: false)
+    User.where(hero: false)
   end
 end
