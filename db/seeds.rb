@@ -194,9 +194,11 @@ puts "Seeding complete."
 puts "Seeding reviews"
 
 50.times do
-  Review.create! (
-  description: Faker::Quote.most_interesting_man_in_the_world,
-  rating: rand(5)
+  Review.create!(
+  content: Faker::Quote.most_interesting_man_in_the_world,
+  user: User.last,
+  booking: Booking.all.sample,
+  ratings: (1..5).to_a.sample
   )
 end
 
