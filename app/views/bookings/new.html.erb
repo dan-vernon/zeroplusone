@@ -1,14 +1,16 @@
-<div class="show-holder bookings-new">
-  <h1>New Booking</h1>
+<div class="home-page">
+  <div class="show-holder bookings-new">
+    <h1>New Booking</h1>
+      <br>
+      <% if %>
+       <% user_signed_in? %>
+    <h1> <%= current_user.first_name %>, create your booking. </h1>
+      <% else %>
+      <h1> You must be logged in to book a PlusOne</h1>
+      <% end %>
     <br>
-    <% if %>
-     <% user_signed_in? %>
-  <h1> <%= current_user.first_name %>, create your booking. </h1>
-    <% else %>
-    <h1> You must be logged in to book a PlusOne</h1>
-    <% end %>
-  <br>
-  <%= render 'form', booking: @booking %>
+    <%= render 'form', booking: @booking %>
+  </div>
 </div>
 
 
