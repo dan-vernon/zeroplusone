@@ -8,8 +8,12 @@
   <div class=" user-bio d-flex justify-content-between">
     <div class="imgnbtns">
      <%= cl_image_tag @user.photo, height: 300, width: 300 %>
+     <div>
+    <% unless @user == current_user %>
+      <div class="center-flex">
 
-      <% end %> -->
+      </div>
+      <% end %>
     </div>
      </div>
     <div class="info">
