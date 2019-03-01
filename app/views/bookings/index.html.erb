@@ -1,16 +1,27 @@
-<br>
-<br>
+<h1>Your upcoming dates</h1>
+<p>Jeez, you're tragic</p>
 
-<h1>Your Bookings</h1>
-<br>
-
-<div class="container-bookings">
+<div class="booking-cards">
   <div class="row">
     <% @bookings.each do |booking| %>
-      <p>test</p>
-    <% end %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <%= link_to user_path(booking.hero), class:'no-underline' do %>
+          <div class="booking-card">
+            <div class="booking-description">
+              <p><%= booking.zero.first_name %> <%= booking.zero.last_name %></p>
+              <p><%= booking.hero.first_name %> <%= booking.hero.last_name %></p>
+              <p><%= booking.description %></p>
+            </div>
+            <div class="booking-photo">
+              <% if booking.hero.photo.url %>
+                <%= cl_image_tag(booking.hero.photo.url) %>
+              <% else %>
+                <i class="fas fa-user-circle" style="font-size: 45px;"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+  <% end %>
   </div>
 </div>
-
-
-
