@@ -12,24 +12,24 @@ Review.destroy_all
 puts "Seeding skills"
 
 Skill.create!(
-  [{skillset: 'talking about law'},
-    {skillset: 'juggling'},
-    {skillset: 'charming mothers in law'},
-    {skillset: 'schmoozing business associates'},
-    {skillset: 'dad dancing'},
-    {skillset: 'getting hilariously drunk'},
-    {skillset: 'getting on with difficult relatives'},
-    {skillset: 'convincing your grandmother that you are going to pass on the family name' },
-    {skillset: 'speaking a foreign language'},
-    {skillset: 'great party tricks'},
-    {skillset: 'making friends with all animals'},
-    {skillset: 'wine tasting'},
-    {skillset: 'sartorial elegance'},
-    {skillset: 'break dancing'},
-    {skillset: 'karaoke'},
-    {skillset: 'owns a gilet'},
-    {skillset: 'recognising bird calls'},
-    {skillset: 'good at most regional accents'}])
+  [{skillset: 'Talking about law'},
+    {skillset: 'Juggling'},
+    {skillset: 'Charming mothers in law'},
+    {skillset: 'Schmoozing business associates'},
+    {skillset: 'Dad dancing'},
+    {skillset: 'Getting hilariously drunk'},
+    {skillset: 'Getting on with difficult relatives'},
+    {skillset: 'Convincing your grandmother that you are going to pass on the family name' },
+    {skillset: 'Speaking a foreign language'},
+    {skillset: 'Great party tricks'},
+    {skillset: 'Making friends with all animals'},
+    {skillset: 'Wine tasting'},
+    {skillset: 'Sartorial elegance'},
+    {skillset: 'Break-dancing'},
+    {skillset: 'Karaoke'},
+    {skillset: 'Owns a gilet'},
+    {skillset: 'Recognising bird calls'},
+    {skillset: 'Good at most regional accents'}])
 
 # seed users
 puts "Seeding users"
@@ -175,9 +175,12 @@ end
 
 puts "Seeding bookings"
 
-20.times do
+person = ['cousin','sister','best friend','pen pal','stunt double','therapist','second cousin','ex-wife','ex-boyfriend','personal trainer','dog','poolboy','house-keeper','gynaecologist','favourite Le Wagon TA','shaman']
+event = ['wedding','resurrection','long-overdue intervention','exorcism','release from prison','Christmas party','kid\'s birthday','kidney stone removal ceremony','return from the Moon','family picnic','last rites','crucifixion','conscious decoupling']
+
+50.times do
   Booking.create!(
-    description: Faker::Superhero.name,
+    description: "My #{person.sample}\'s #{event.sample} in #{Faker::Address.country}",
     date: Faker::Date.between(20.days.ago, Date.today),
     hero: User.heroes.sample,
     zero: User.zeroes.sample
