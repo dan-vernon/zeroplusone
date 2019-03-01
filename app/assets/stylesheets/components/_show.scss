@@ -1,22 +1,25 @@
 .show-holder {
   background-color: white;
-  margin: 48px 200px;
+  margin: 0 auto;
   padding: 20px;
   box-shadow: 2px 2px 2px gray;
   border-radius: 8px;
-  width: 700px;
-  line-height: 16px;
+  width: 900px;
+  line-height: 25px;
 }
 
 .show-holder h1 {
   text-align: center;
   color: black;
   margin: 0px;
+  padding-top: 20px;
 }
 
 .show-holder img {
   display: block;
-  margin: 40px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .info {
@@ -28,7 +31,8 @@ display: inline;
 }
 
 .inline-buttons {
-    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 
