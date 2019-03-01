@@ -1,4 +1,5 @@
 import "bootstrap";
-import { loadDynamicBannerText } from '../components/banner';
-loadDynamicBannerText();
+import { initAutocomplete } from '../plugins/init_autocomplete';
+
+initAutocomplete();
 console.log('Hello World from Webpacker')
