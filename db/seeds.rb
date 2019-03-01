@@ -1,8 +1,8 @@
 require 'faker'
 
+UserSkill.destroy_all
 Skill.destroy_all
 User.destroy_all
-UserSkill.destroy_all
 Booking.destroy_all
 Review.destroy_all
 
