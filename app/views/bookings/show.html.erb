@@ -2,13 +2,20 @@
   <div class="show-holder booking-show">
     <h1>It's a date!</h1>
     <div class="info">
-      <div>`
-        <p><strong><%= @booking.zero.first_name %></strong>, your date with <strong><%= @booking.hero.first_name %></strong>,is going ahead on <strong><%= @booking.date.strftime("%a %b %-d") %></strong>, at <%= @booking.description %>.</p>
+      <div>
+        <strong><%= @booking.zero.first_name %></strong>, your date with <strong><%= @booking.hero.first_name %></strong>, is going ahead on <strong><%= @booking.date.strftime("%a %b %-d") %></strong>
+          <br>
+           <%= @booking.description %>
         </div>
         <br>
         <br>
           <h4>Have a great time!  <i class="fas fa-glass-cheers"></i></h4>
         </div>
+
+        <div class="home-button btn">
+          <%= link_to "Go home?", users_path %>
+        </div>
+
       </div>
   </div>
 </div>
