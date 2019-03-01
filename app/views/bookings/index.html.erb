@@ -1,23 +1,23 @@
+<br>
+<br>
+<br>
 <h1>Your upcoming dates</h1>
-<p>Jeez, you're so tragic.</p>
+<br>
+
 
 <div class="booking-cards">
   <div class="row">
     <% @bookings.each do |booking| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="col-xs-12 col-sm-6 col-md-4">
         <%= link_to user_path(booking.hero), class:'no-underline' do %>
-          <div class="booking-card">
-            <div class="booking-description">
-              <p><%= booking.zero.first_name %> <%= booking.zero.last_name %></p>
-              <p><%= booking.hero.first_name %> <%= booking.hero.last_name %></p>
-              <p><%= booking.description %></p>
-            </div>
-            <div class="booking-photo">
-              <% if booking.hero.photo.url %>
-                <%= cl_image_tag(booking.hero.photo.url) %>
-              <% else %>
-                <i class="fas fa-user-circle" style="font-size: 45px;"></i>
-              <% end %>
+          <div class="card p-3" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)), url(' <%= cl_image_path booking.hero.photo.url %>'); background-position: center;">
+
+            <div class="card-body-booking">
+              <div class="card-title">
+                <p><strong>Your Plus One is:</strong> <%= booking.hero.first_name %> <%= booking.hero.last_name %></p>
+              </div>
+              <span class="card-text"><p class="booking-sentence"><strong>Booking Description: </strong><%= booking.description %></p></span>
+
             </div>
           </div>
         <% end %>
@@ -25,3 +25,7 @@
   <% end %>
   </div>
 </div>
+
+
+
+
