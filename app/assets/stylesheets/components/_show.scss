@@ -1,11 +1,10 @@
 .show-holder {
   background-color: white;
-  margin: 0px 200px;
+  margin: 48px 200px;
   padding: 20px;
   box-shadow: 2px 2px 2px gray;
   border-radius: 8px;
   width: 700px;
-  border: solid 2px;
   line-height: 16px;
 }
 
@@ -17,5 +16,40 @@
 
 .show-holder img {
   display: block;
-  margin: 50px;
+  margin: 40px;
 }
+
+.info {
+  margin: 40px;
+}
+
+.i {
+display: inline;
+}
+
+.inline-buttons {
+    text-align: center;
+}
+
+
+
+.inline-buttons .button {
+    width: 100%;
+    margin: 20px;
+
+}
+
+.show-holder ul {
+  list-style-type: circle;
+}
+
+// .show-holder
+// li:before {
+//   content: '\f192';
+//   font-family: 'FontAwesome';
+//   float: left;
+//   margin-left: -1.5em;
+//   color: #0074D9;
+// }
+
+
