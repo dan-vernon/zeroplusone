@@ -34,11 +34,42 @@
       <% end %>
     </div>
   </div>
+  <div class="inline-buttons">
+      <% unless @user == current_user %>
+        <a class="button"><%= link_to "Book me",  new_user_booking_path(@user), class: "btn btn-flat" %></a>
+        <a class="button secondary"><%= link_to "Return to PlusOnes", users_path, class: "btn btn-light"%></a>
+        <% end %>
+        <a class="button secondary"><%= link_to "Home", "/", class: "btn btn-light"%></a>
+  </div>
+  <% if @user.hero %>
     <div class="review-show">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th class="w-25" scope="col">Rating</th>
+            <th scope="col">Review</th>
+          </tr>
+        </thead>
+        <tbody>
       <% @user.reviews.each do |review|%>
-        <p><strong>Rating: </strong></p><%= review.ratings %>
-        <p><strong>Description: </strong></p><%= review.content  %>
+        <tr>
+          <td>
+            <% review.ratings.times do %>
+            <i class="fas fa-star"></i>
+            <% end %>
+          </td>
+          <td>
+            <%= review.content  %>
+          </td>
+        </tr>
       <% end %>
+        </tbody>
+      </table>
+
+
+
     </div>
+    <% else %>
+<% end %>
 </div>
 
