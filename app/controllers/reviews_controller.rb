@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
   end
 
   def new
-    @user = User.find(params([:user_id]))
+    @user = User.find(params[:user_id])
     @review = Review.new
   end
 

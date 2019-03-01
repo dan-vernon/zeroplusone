@@ -34,13 +34,11 @@
       <% end %>
     </div>
   </div>
-
-   <div class="inline-buttons">
-    <% unless @user == current_user %>
-      <a class="button"><%= link_to "Book me",  new_user_booking_path(@user), class: "btn btn-flat" %></a>
-      <a class="button secondary"><%= link_to "Return to PlusOnes", users_path, class: "btn btn-light"%></a>
+    <div class="review-show">
+      <% @user.reviews.each do |review|%>
+      <p><strong>Rating: </strong>p><%= review.ratings %>
+      <p><strong>Description: </strong>p><%= review.content  %>
       <% end %>
-      <a class="button secondary"><%= link_to "Home", "/", class: "btn btn-light"%></a>
     </div>
 </div>
 
