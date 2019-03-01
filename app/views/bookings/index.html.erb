@@ -6,7 +6,6 @@
 <h1>Your upcoming dates</h1>
 <br>
 
-
 <div class="booking-cards">
   <div class="row">
     <% @bookings.each do |booking| %>
@@ -16,9 +15,10 @@
 
             <div class="card-body-booking">
               <div class="card-title">
-                <p><strong>Your Plus One is:</strong> <%= booking.hero.first_name %> <%= booking.hero.last_name %></p>
+                <strong>Your PlusOne is:</strong> <%= booking.hero.first_name %> <%= booking.hero.last_name %>
               </div>
-              <span class="card-text"><p class="booking-sentence"><strong>Booking Description: </strong><%= booking.description %></p></span>
+              <span class="card-text"><p class="booking-sentence"><%= booking.description %>
+                <br> <%= booking.date.strftime("%a %b %-d") %></p></span>
 
             </div>
           </div>

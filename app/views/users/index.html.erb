@@ -1,4 +1,6 @@
-
+<br>
+<br>
+<br>
 
 <div class="banner p-3 my-3 d-flex flex-column rounded">
     <h1 class="mb-auto">Choose your PlusOne</h1>
@@ -9,7 +11,7 @@
 
 <% @users.each do |user| %>
 
-<div class="card p-3" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)), url(' <%= cl_image_path user.photo, gravity: :face %>'); background-position: center;">
+<div class="card p-3" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.1)), url(' <%= cl_image_path user.photo, gravity: :face %>'); background-position: center;">
   <%#= cl_image_tag user.photo, height: 300, width: 400, crop: :fill %>
   <div class="card-body">
     <div class="card-title">
