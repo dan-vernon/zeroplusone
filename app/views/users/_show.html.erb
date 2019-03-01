@@ -34,6 +34,11 @@
       <% end %>
     </div>
   </div>
-
+    <div class="review-show">
+      <% @user.reviews.each do |review|%>
+      <p><strong>Rating: </strong>p><%= review.ratings %>
+      <p><strong>Description: </strong>p><%= review.content  %>
+      <% end %>
+    </div>
 </div>
 

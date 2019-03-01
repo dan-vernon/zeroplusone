@@ -186,3 +186,30 @@ end
 
 puts "Seeding complete."
 
+
+
+puts "Seeding reviews"
+
+50.times do
+  Review.create! (
+  description: Faker::Quote.most_interesting_man_in_the_world,
+  rating: rand(5)
+  )
+end
+
+
+puts "Seeding complete"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
