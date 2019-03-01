@@ -196,7 +196,7 @@ puts "Seeding reviews"
 50.times do
   Review.create!(
   content: Faker::Quote.most_interesting_man_in_the_world,
-  user: User.last,
+  user: User.heroes.sample,
   booking: Booking.all.sample,
   ratings: (1..5).to_a.sample
   )
