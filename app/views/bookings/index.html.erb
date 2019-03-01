@@ -10,12 +10,14 @@
   <div class="row">
     <% @bookings.each do |booking| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <%= link_to user_path(booking.hero), class:'no-underline' do %>
-          <div class="card p-3" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)), url(' <%= cl_image_path booking.hero.photo.url %>'); background-position: center;">
+        <%= link_to user_path(booking.zero), class:'no-underline' do %>
+          <div class="card p-3" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)), url(' <%= cl_image_path booking.zero.photo.url %>'); background-position: center;">
 
             <div class="card-body-booking">
               <div class="card-title">
-                <strong>Your PlusOne is:</strong> <%= booking.hero.first_name %> <%= booking.hero.last_name %>
+                You are accompanying <strong>
+                  <%= booking.zero.first_name %> <%= booking.zero.last_name %>
+                </strong>
               </div>
               <span class="card-text"><p class="booking-sentence"><%= booking.description %>
                 <br> <%= booking.date.strftime("%a %b %-d") %></p></span>
