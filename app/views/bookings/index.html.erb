@@ -1,12 +1,16 @@
-<h1>Your upcoming dates</h1>
-<p>Jeez, you're tragic</p>
+<br>
+<br>
 
-<% @bookings.each do |booking| %>
-<ul>
-  <li>You, the loser, <%= booking.zero.first_name %></li>
-  <li>Your date with <%= booking.hero.first_name %></li>
-  <li> On: <%= booking.date %></li>
-  <li><%= booking.description %></li>
-</ul>
+<h1>Your Bookings</h1>
+<br>
 
-<% end %>
+<div class="container-bookings">
+  <div class="row">
+    <% @bookings.each do |booking| %>
+      <p>test</p>
+    <% end %>
+  </div>
+</div>
+
+
+
