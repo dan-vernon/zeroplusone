@@ -1,7 +1,13 @@
+
 <div class="show-holder bookings-new">
   <h1>Create a new booking,
     <br>
-  you loser.</h1>
+    <% if %>
+     <% user_signed_in? %>
+  <%= current_user.first_name %>
+    <% else %>
+    <br>
+    <% end %></h1>
   <br>
   <%= render 'form', booking: @booking %>
 </div>
