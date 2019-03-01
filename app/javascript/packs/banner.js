@@ -8,5 +8,4 @@ const loadDynamicBannerText = () => {
   });
 }
 
-export { loadDynamicBannerText };
-
+loadDynamicBannerText();
